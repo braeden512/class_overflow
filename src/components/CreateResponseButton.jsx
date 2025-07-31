@@ -38,7 +38,7 @@ const CreateResponseButton = ({ question_id = null, parent_response_id = null, h
     }
 
     try {
-      const response = await fetch("http://localhost/class_overflow/api/create_response.php", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/create_response.php`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(postData),

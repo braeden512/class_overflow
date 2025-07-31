@@ -10,7 +10,7 @@ const Response = ({ id, username, createdAt, content }) => {
     const [dislikes, setDislikes] = useState(0);
 
     useEffect(() => {
-        fetch('http://localhost/class_overflow/api/get_post_likes.php', {
+        fetch(`${process.env.REACT_APP_API_URL}/api/get_post_likes.php`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

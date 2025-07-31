@@ -6,7 +6,7 @@ const ResponseList = ({ question_id, refreshKey }) => {
   const [responses, setResponses] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost/class_overflow/api/get_responses.php?question_id=${question_id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/get_responses.php?question_id=${question_id}`)
       .then(res => res.json())
       .then(data => {
         if (data.success) {

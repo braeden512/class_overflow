@@ -55,7 +55,7 @@ const Profile = () => {
             return;
         }
 
-        const response = await fetch("http://localhost/class_overflow/api/delete_post.php", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/delete_post.php`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const Profile = () => {
         const user = JSON.parse(localStorage.getItem("user"));
 
         // changing dark_mode for user in database
-        const response = await fetch("http://localhost/class_overflow/api/profile.php", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/profile.php`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

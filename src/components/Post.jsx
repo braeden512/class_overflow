@@ -20,7 +20,7 @@ const Post = ({ id, username, schoolName, createdAt, content }) => {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost/class_overflow/api/get_post_likes.php', {
+    fetch(`${process.env.REACT_APP_API_URL}/api/get_post_likes.php`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({ question_id: id }),
@@ -34,7 +34,7 @@ const Post = ({ id, username, schoolName, createdAt, content }) => {
   }, [id]);
 
   const sendUpdate = (payload, toggleFn) => {
-    fetch('http://localhost/class_overflow/api/update_like_dislike.php', {
+    fetch(`${process.env.REACT_APP_API_URL}/api/update_like_dislike.php`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),

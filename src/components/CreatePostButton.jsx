@@ -60,7 +60,7 @@ const FloatingAddQuestionButton = ({handlePostCreation}) => {
     };
 
     try {
-      const response = await fetch("http://localhost/class_overflow/api/create_post.php", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/create_post.php`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
