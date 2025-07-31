@@ -22,7 +22,7 @@ const Forum = () => {
 
     const fetchPosts = useCallback(async () => {
         try {
-            const response = await fetch("http://localhost/class_overflow/api/show_post.php");
+            const response = await fetch("${process.env.REACT_APP_API_URL}/api/show_post.php");
             const data = await response.json();
 
             if (data.success) {

@@ -29,7 +29,7 @@ const Register = () => {
       college: formData.college,
     };
     try {
-      const response = await fetch("http://localhost/class_overflow/api/register.php", {
+      const response = await fetch("${process.env.REACT_APP_API_URL}/api/register.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

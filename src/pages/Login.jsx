@@ -28,7 +28,7 @@ const Login = () => {
     try {
       // Call the login API or your logic here
       // fetch the path where PHP server is running
-      const response = await fetch("http://localhost/class_overflow/api/login.php", {
+      const response = await fetch("${process.env.REACT_APP_API_URL}/api/login.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

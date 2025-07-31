@@ -22,7 +22,7 @@ const Profile = () => {
         const user = JSON.parse(localStorage.getItem("user"));
 
         try {
-            const response = await fetch(`http://localhost/class_overflow/api/post_history.php?user_id=${user.id}`); // show post from only the user
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/post_history.php?user_id=${user.id}`); // show post from only the user
             const data = await response.json();
 
             if (data.success) {
