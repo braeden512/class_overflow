@@ -1,0 +1,19 @@
+.response_container {
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    text-align: left; /* Left align text */
+    padding: 20px; /* Padding around the form */
+    background-color: white; /* Optional background for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+    border-radius: 8px;
+}
+
+.tiny-text {
+    font-size: 14px;
+    color: gray;
+}
+
+.username {
+    font-weight: 1000px;
+}
