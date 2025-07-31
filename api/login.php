@@ -1,9 +1,9 @@
 <?php
 require 'db.php'; // Database connection
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: *");
-header("Content-Type: application/json");
+header('Access-Control-Allow-Origin: https://classoverflow.vercel.app');
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 
 $data = json_decode(file_get_contents("php://input"), true);
 
